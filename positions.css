@@ -1,0 +1,19 @@
+.fixed{
+    border:1px solid black;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: white;
+   
+}
+#a1{
+    color: black;
+    background-color: grey;
+    border: 2px solid black;
+    position:fixed;
+    padding:15px;
+    border-color: brown;
+    bottom:0px;
+    left:0px;
+}
