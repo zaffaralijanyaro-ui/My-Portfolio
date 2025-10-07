@@ -1,0 +1,108 @@
+/*General Reset and Styling */
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+body{
+    background: #f4f4f4;
+    padding:20px;
+}
+h1{
+    text-align: center;
+    margin-bottom:30px;
+    color:#333;
+}
+hr{
+    margin:40px 0;
+    border:0;
+    border-top:1px solid #ccc;
+}
+.demo-section{
+    background-color: white;
+    padding:2opx;
+    border-radius:8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.resize-note{
+    margin-top:20px;
+    font-style:italic;
+    color:#555;
+    text-align:center;
+}
+/*--flex Container Setup--*/
+
+.flex-container{
+    /*Required: This turns on Flexbox forcontainer */
+    display:flex;
+    border:2px dashed #007bff;
+    padding:10px;
+    min-height:100px;
+    margin-top:15px;
+}
+
+/*--- Demo 1 Navigation Bar--- */
+
+.nav-bar{
+    /* Sets the Main Axis direction */
+    flex-direction:row;
+
+    /* distributes space between the items along the Main Axis */
+    justify-content:space-evenly;
+
+    /* centers items vertically along ythe cross Axis */
+    align-items:center;
+    background-color:#e9f5ff;
+
+}
+.nav-bar a{
+    text-decoration: NONE;
+    COLOR:#007BFF;
+    padding:8px 15px;
+    border:2px solid transparent;
+    transition: background-color 0.3s;
+}
+
+/*-- Demo 2: Card Layout--- */
+
+.card-wrapper{
+    /* Reqired: Allows items to break onto a new line */
+    flex-wrap:wrap;
+
+    /* Alig;n items to the tio of the container when wrapped */
+    align-items:flex-start;
+
+}
+.flex-item{
+    background-color: #28a745;
+    color:white;
+    padding:20px;
+    margin:10px;
+    text-align:cente;
+    border-radius:5px;
+    min-width:150px;
+}
+.card-1{
+    flex-grow: 2;
+    background-color:#ffc107;
+
+}
+.card-2{
+    flex-grow:2;
+    background-color: #dc3545;
+
+}
+.card-3{
+    flex-grow:1;
+    background-color: #17a2b8;
+}
+.card-4{
+    background-color:#6c7d7d;
+    flex:0 0 100%  /*         shorthand: dont't grow (0), don't shrink (0), Base Size is 100% */
+    
+}
+.nav-bar a:hover{
+    background-color: #ffc107;
+    color:white;
+}
