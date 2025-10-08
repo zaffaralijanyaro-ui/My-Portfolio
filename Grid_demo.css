@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+    body{
+        background-color: #f4f7f6;
+        padding:20px;
+    }
+    h1{
+        text-align: center;
+        margin-bottom:30px;
+        color:#333;
+    }
+    .resize-note{
+        margin-top:20px;
+        padding:10px;
+        border:1px dashed #007bff;
+        font-style:italic;
+        color:#555;
+        text-align:center;
+    }
+    /* Grid container setup (Destip.Default view) ----*/
+
+    .grid-container{
+        /*1. Requires acitvates css grid layout */
+        display:grid;
+
+        border:3px solid #007bff;
+        gap:15px; /*Spacing berween grid items */
+        padding:15px;
+        background-color:white;
+        min-height: 80vh;
+    }
+    /*2. Defining columns and Rows using 'fr' (Fractional unit) */
+    .grid-container{
+        /* creates 3 columns: a small 1fr nav, alarge 4fr content area, and a 1fr sidebar */
+        grid-template-columns: 1fr 4fr 1fr;
+
+        /* Defines the rows for the layout */
+        grid-template-rows:auto 1fr auto;
+        /* 2. Defining named template areas visually */
+        grid-template-areas:
+        "header-area header-area header-area"
+        "nav-area    main-area   sidebar-area"
+        "footer-area footer-area footer-area";
+    }
+
+    /* ---Grid Items Placement---*/
+    .grid-item{
+        padding:15px;
+        text-align:center;
+        border-radius:5px;
+        font-weight:bold;
+        background-color: #333;
+        color:white;
+    }
+    /* Assigning items to their named areas */
+    .header-area{
+        grid-area:header-area;
+        background-color: #007bff;
+    }
+    .nav-area {
+        grid-area:nav-area;
+        background-color:#28a745;
+    }
+    .main-area{
+        grid-area:main-area;
+        background-color: #17a2b8;
+    }
+    .sidebar-area{
+        grid-area:sidebar-area;
+        background-color:#ffc107;
+    }
+    .footer-area{
+        grid-area:footer-area;
+        background-color:#6c757d;
+    }
+
+    /*---Media Query for Responsiveness (Mobile View) --- */
+    /*changes the layout when the viewport is 768px wide or smaller */
+    @media (max-width:768px){
+
+        /* 4. overriding the layout within the Media Querry */
+        .grid-container{
+            /* Redifines to a single colum */
+            grid-template-columns:1fr;
+
+            /* Rddefiner the named areas to stack vertically */
+            grid-template-areas:
+                "header-area"
+                "nav-area"
+                "sidebar-area"
+                "main-area"
+                "footer-area";
+
+        }
+        .grid-item{
+            /* Adjusts padding for smaller screens */
+            padding:10px;
+        }
+    }

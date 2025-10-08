@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Grid_demo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid box</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Grid Layout Demonstration</h1>
+    </header>
+    <main class="grid-container">
+        <div class="grid-item header-area">Header (Grid Area)</div>
+        <nav class="grid-item nav-area">Navigation</nav>
+        <section class="grid-item main-area">
+            <h2>Main Content Area</h2>
+            <p>This area takes ypu to the largest fraction of space (4fr) and reflows below the nav on mobile.</p>
+        </section>
+        <aside class="grid-item sidebar-area">Sidebar (1fr)</aside>
+        <footer class="grid-item footer-area">Footer (Full Width)</footer>
+    </main>
+    <p class="resize-note">Try resizing your browser horizontally to see the layout change from desktop (Grid) to mobile (stacked!)</p>
+</body>
+</html>
